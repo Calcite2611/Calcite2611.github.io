@@ -1,0 +1,18 @@
+/* assets/scss/custom.scss */
+
+:root {
+    /* 1. 全体の背景色 (dark latte) */
+    --body-background: #F0E8D7; 
+
+    /* 2. 記事やサイドバーの背景色 (cosmic latte) */
+    --card-background: #FFF8E7; 
+
+    /* 3. アクセントカラー (リンクやボタンの色) */
+    --primary: #5A7ACD;
+}
+
+/* ダークモード時の色設定 */
+[data-scheme="dark"] {
+    --body-background: #1a1b1e;
+    --card-background: #25262b;
+}
