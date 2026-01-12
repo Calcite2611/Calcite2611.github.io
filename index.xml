@@ -536,28 +536,4 @@
 &lt;p&gt;加えて、別のsshキーを作成し、公開鍵をソースコード用リポジトリのActionsに登録します。これについても同様に行います。&lt;/p&gt;
 &lt;p&gt;正常に設定が完了すれば、ソースコード用リポジトリにプッシュするたびに、自動的にHugoサイトがビルドされ、公開用リポジトリにデプロイされます。&lt;/p&gt;
 &lt;h2 id="おわりに"&gt;おわりに
-&lt;/h2&gt;&lt;p&gt;今回は備忘録として、今回このブログを立ち上げるまでに行った手順をまとめました。Hugoは非常に強力で柔軟なSSGであり、Github Pagesと組み合わせることで、簡単に独自ドメインでブログを公開できます。今後も技術的な内容を中心に記事を書いていく予定ですので、ぜひご期待ください。&lt;/p&gt;</description></item><item><title>Free5GC + UERANSIMで5G環境を構築した話</title><link>https://swimmy2611.com/post/template/</link><pubDate>Fri, 09 Jan 2026 18:39:48 +0900</pubDate><guid>https://swimmy2611.com/post/template/</guid><description>&lt;img src="https://swimmy2611.com/post/template/cover.jpg" alt="Featured image of post Free5GC + UERANSIMで5G環境を構築した話" /&gt;&lt;h2 id="はじめに"&gt;はじめに
-&lt;/h2&gt;&lt;p&gt;この記事は、Hugoで記事を書く際のテンプレートとして使用することを目的としています。以下のセクションを参考にして、記事を書き進めてください。&lt;/p&gt;
-&lt;h2 id="セクション1-見出し"&gt;セクション1: 見出し
-&lt;/h2&gt;&lt;p&gt;ここにセクション1の内容を記述します。リンクも挿入できます。&lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
-&gt;Hugo公式サイト&lt;/a&gt;を参照してください。&lt;/p&gt;
-&lt;h2 id="コードブロック"&gt;コードブロック
-&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hello_world&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id="結論"&gt;結論
-&lt;/h2&gt;&lt;p&gt;この記事のまとめや結論をここに記述します。&lt;/p&gt;
-&lt;h2 id="参考文献"&gt;参考文献
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://gohugo.io/documentation/" target="_blank" rel="noopener"
-&gt;Hugo Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://www.markdownguide.org/" target="_blank" rel="noopener"
-&gt;Markdown Guide&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;/h2&gt;&lt;p&gt;今回は備忘録として、今回このブログを立ち上げるまでに行った手順をまとめました。Hugoは非常に強力で柔軟なSSGであり、Github Pagesと組み合わせることで、簡単に独自ドメインでブログを公開できます。今後も技術的な内容を中心に記事を書いていく予定ですので、ぜひご期待ください。&lt;/p&gt;</description></item></channel></rss>
