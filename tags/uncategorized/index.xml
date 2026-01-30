@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Uncategorized on Swimmy&#39;s Blog</title>
+        <title>Uncategorized on スイミーの技術メモ</title>
         <link>http://localhost:1313/tags/uncategorized/</link>
-        <description>Recent content in Uncategorized on Swimmy&#39;s Blog</description>
+        <description>Recent content in Uncategorized on スイミーの技術メモ</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <copyright>Swimmy2611</copyright><atom:link href="http://localhost:1313/tags/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>Swimmy2611</copyright>
+        <lastBuildDate>Fri, 30 Jan 2026 20:03:34 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/uncategorized/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>新しいMacBook Airに環境を移行した話</title>
+        <link>http://localhost:1313/post/tech/new-pc/</link>
+        <pubDate>Fri, 30 Jan 2026 20:03:34 +0900</pubDate>
+        
+        <guid>http://localhost:1313/post/tech/new-pc/</guid>
+        <description>&lt;img src="http://localhost:1313/post/new-macbook-air-cover.jpg" alt="Featured image of post 新しいMacBook Airに環境を移行した話" /&gt;&lt;h2 id=&#34;はじめに&#34;&gt;はじめに
+&lt;/h2&gt;&lt;p&gt;ここに記事の導入を書きます。読者が「何を得られる記事か」を簡潔に伝えます。&lt;/p&gt;
+&lt;h2 id=&#34;セクション1-見出し&#34;&gt;セクション1: 見出し
+&lt;/h2&gt;&lt;p&gt;本文です。リンクは &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo公式サイト&lt;/a&gt; のように書きます。&lt;/p&gt;
+&lt;h3 id=&#34;サブセクション&#34;&gt;サブセクション
+&lt;/h3&gt;&lt;p&gt;細かい説明はサブセクションで区切ります。&lt;/p&gt;
+&lt;h2 id=&#34;コードブロック&#34;&gt;コードブロック
+&lt;/h2&gt;&lt;p&gt;技術ブログでは必須のコードブロックです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;hello_world&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
     </channel>
 </rss>

@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>スイミーの技術メモ</title><link>https://swimmy2611.com/</link><description>Recent content on スイミーの技術メモ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>Swimmy2611</copyright><lastBuildDate>Tue, 13 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="https://swimmy2611.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる</title><link>https://swimmy2611.com/post/tech/hugo-hp/</link><pubDate>Tue, 13 Jan 2026 00:00:00 +0900</pubDate><guid>https://swimmy2611.com/post/tech/hugo-hp/</guid><description>&lt;img src="https://swimmy2611.com/post/hugo-hp-cover.png" alt="Featured image of post Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる" /&gt;&lt;h2 id="はじめに"&gt;はじめに
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>スイミーの技術メモ</title><link>https://swimmy2611.com/</link><description>Recent content on スイミーの技術メモ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>Swimmy2611</copyright><lastBuildDate>Fri, 30 Jan 2026 20:03:34 +0900</lastBuildDate><atom:link href="https://swimmy2611.com/index.xml" rel="self" type="application/rss+xml"/><item><title>新しいMacBook Airに環境を移行した話</title><link>https://swimmy2611.com/post/tech/new-pc/</link><pubDate>Fri, 30 Jan 2026 20:03:34 +0900</pubDate><guid>https://swimmy2611.com/post/tech/new-pc/</guid><description>&lt;img src="https://swimmy2611.com/post/new-macbookair-cover.png" alt="Featured image of post 新しいMacBook Airに環境を移行した話" /&gt;&lt;h2 id="はじめに"&gt;はじめに
+&lt;/h2&gt;&lt;p&gt;先日、新しいMacBook Air (Apple M4, 2025)を購入しました。これに伴い、以前のMacBook Air (Apple M2, 2022)から環境を移行する必要がありました。この記事では、その際に行った環境設定やインストールしたソフトウェアについて備忘録としてまとめます。&lt;/p&gt;
+&lt;h2 id="環境移行の概要"&gt;環境移行の概要
+&lt;/h2&gt;&lt;p&gt;今回の環境移行は、以下の手順で行いました。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;古いMacBook Airのバックアップを作成&lt;/li&gt;
+&lt;li&gt;新しいMacBook Airの初期設定&lt;/li&gt;
+&lt;li&gt;必要なソフトウェアのインストール&lt;/li&gt;
+&lt;li&gt;データの移行と設定の復元&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="バックアップの作成"&gt;バックアップの作成
+&lt;/h2&gt;&lt;p&gt;いつも通り、Time Machineバックアップと手動バックアップを組み合わせて行います。今回は新しいPCということもあって、基本的には手動で必要なデータを移行しました(その方が環境が綺麗になるため)。&lt;/p&gt;
+&lt;h3 id="time-machineバックアップ"&gt;Time Machineバックアップ
+&lt;/h3&gt;&lt;p&gt;Time Machineを使って、外付けHDDにバックアップを作成します。Time Machineのバックアップは、普通にとると非現実的な時間がかかるので、以下のコマンドで高速化します。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo sysctl debug.lowpri_throttle_enabled&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="手動バックアップ"&gt;手動バックアップ
+&lt;/h3&gt;&lt;p&gt;手動バックアップには、以下の物をコピーします。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/home/ユーザー名/以下の重要なフォルダ&lt;/li&gt;
+&lt;li&gt;VSCodeの設定ファイル(latex.json, settings.json)&lt;/li&gt;
+&lt;li&gt;ミュージックアプリのライブラリファイル(Music Library.musiclibrary)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ブラウザのブックマークやパスワードは、各ブラウザの同期機能を使って移行しました(Brave)。iCloudも同様に使っています。&lt;/p&gt;
+&lt;h2 id="新しいmacbook-airの初期設定"&gt;新しいMacBook Airの初期設定
+&lt;/h2&gt;&lt;p&gt;新しいMacBook Airを起動し、初期設定を行います。Apple IDでサインインし、基本的な設定を完了させます。macOSの最新バージョンがインストールされていたので、そのまま使用しました。持ち運ぶので位置情報はオンにしています。&lt;/p&gt;
+&lt;h2 id="必要なソフトウェアのインストール"&gt;必要なソフトウェアのインストール
+&lt;/h2&gt;&lt;p&gt;元のMacBook Airで使用していたソフトウェアを新しいMacにインストールします。基本的にはブラウザとNotion、VSCodeなどです。App StoreからインストールできるものはApp Storeから、それ以外はブラウザからdmgファイルをダウンロードしてインストールします。&lt;/p&gt;
+&lt;h3 id="homebrewのインストール"&gt;Homebrewのインストール
+&lt;/h3&gt;&lt;p&gt;Homebrewをインストールして、パッケージ管理を行います。ターミナルで以下のコマンドを実行します。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/bin/bash -c &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="必要なパッケージのインストール"&gt;必要なパッケージのインストール
+&lt;/h3&gt;&lt;p&gt;Homebrewを使って、必要なパッケージをインストールします。基本的にはpyenv, rust, wgetなどです。なぜMacにwgetがデフォルトで入っていないのかは謎です。ここでついでにLaTeXも入れます。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install pyenv rust wget
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install mactex --cask
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo /usr/local/texlive/2025/bin/universal-darwin/tlmgr update --self --all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;その後、pyenvでPythonの環境を整えます。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pyenv install 3.13
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pyenv global 3.13
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="vscodeの設定"&gt;VSCodeの設定
+&lt;/h3&gt;&lt;p&gt;基本的には同期すれば設定は復元されますが、拡張機能のインストールがきちんと行われているか確認します。また、settings.jsonやlatex.jsonも手動で復元します。この時ついでにGithub Copilotも有効化しました。&lt;/p&gt;
+&lt;h2 id="データの移行と設定の復元"&gt;データの移行と設定の復元
+&lt;/h2&gt;&lt;p&gt;手動でバックアップしたデータを新しいMacBook Airにコピーします。特に重要なフォルダや設定ファイルを元の場所に戻します。ミュージックアプリのライブラリも復元し、音楽データが正しく表示されることを確認します。&lt;/p&gt;
+&lt;h2 id="おわりに"&gt;おわりに
+&lt;/h2&gt;&lt;p&gt;ここまでの内容を見ると、「あれ、意外と大したことない？」と思うかもしれませんが、いかんせん高校3年分+大学3年分のデータ、環境があるので、結構な時間がかかりました。また、今使っていないものは入れないようにしたので、その分別も手間がかかりました。ちなみにまだ完全には終わっておらず、
+新しいMacBook Airでの作業環境が整い次第、また新たな記事を書いていきたいと思います。次回作をお楽しみに。&lt;/p&gt;</description></item><item><title>Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる</title><link>https://swimmy2611.com/post/tech/hugo-hp/</link><pubDate>Tue, 13 Jan 2026 00:00:00 +0900</pubDate><guid>https://swimmy2611.com/post/tech/hugo-hp/</guid><description>&lt;img src="https://swimmy2611.com/post/hugo-hp-cover.png" alt="Featured image of post Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる" /&gt;&lt;h2 id="はじめに"&gt;はじめに
 &lt;/h2&gt;&lt;p&gt;先日、学科の友人におすすめされて、独自ドメインを取得して技術ブログを立ち上げよう、と急に思い立ちました。 そこで、Hugoを使ってブログを構築し、Github PagesとXserver Domainを組み合わせて独自ドメインで公開する方法を試してみました。&lt;/p&gt;
 &lt;h2 id="hugoとは"&gt;Hugoとは
 &lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
