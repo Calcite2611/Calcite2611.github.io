@@ -43,7 +43,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="必要なパッケージのインストール"&gt;必要なパッケージのインストール
-&lt;/h3&gt;&lt;p&gt;Homebrewを使って、必要なパッケージをインストールします。基本的にはpyenv, rust, wgetなどです。なぜMacにwgetがデフォルトで入っていないのかは謎です。ここでついでにLaTeXも入れます。&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Homebrewを使って、必要なパッケージをインストールします。基本的にはpyenv, rust, wgetなどです。なぜMacにwgetがデフォルトで入っていないのかは謎です。ここでついでにLaTeXも入れます。また、この記事を書くときにいつも使っているImageMagickも入れます。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -51,7 +51,7 @@
 &lt;/span&gt;&lt;span class="lnt"&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install pyenv rust wget
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install pyenv rust wget ImageMagick
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install mactex --cask
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo /usr/local/texlive/2025/bin/universal-darwin/tlmgr update --self --all
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -69,11 +69,45 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="vscodeの設定"&gt;VSCodeの設定
 &lt;/h3&gt;&lt;p&gt;基本的には同期すれば設定は復元されますが、拡張機能のインストールがきちんと行われているか確認します。また、settings.jsonやlatex.jsonも手動で復元します。この時ついでにGithub Copilotも有効化しました。&lt;/p&gt;
+&lt;h3 id="フォントの導入"&gt;フォントの導入
+&lt;/h3&gt;&lt;p&gt;VSCodeの設定と同時に、必要なフォントもインストールします。今回は以下のフォントを導入しました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Source Han Code JP&lt;/li&gt;
+&lt;li&gt;Noto Sans JP&lt;/li&gt;
+&lt;li&gt;Noto Serif JP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;基本的にはVSCode上でのフォントは全てSource Han Code JPに統一しています。リンクはこの記事の最後にまとめておきます。&lt;/p&gt;
+&lt;h3 id="キーボードの設定"&gt;キーボードの設定
+&lt;/h3&gt;&lt;p&gt;何気に大事なのがキーボード設定です。デフォルトだと¥キーを打ったときにバックスラッシュが出ないようになっています。Macにおいては圧倒的に円マークよりもバックスラッシュの方が使用頻度が高いので、以下の設定を行います。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;システム設定を開く&lt;/li&gt;
+&lt;li&gt;キーボード &amp;gt; 入力ソース を選択&lt;/li&gt;
+&lt;li&gt;「日本語 - ローマ字入力」を選択し、「入力ソースのオプション」をクリック&lt;/li&gt;
+&lt;li&gt;「¥キーで入力する文字」を「バックスラッシュ()」に変更&lt;/li&gt;
+&lt;li&gt;入力モードの「英字」にチェックを入れる&lt;/li&gt;
+&lt;li&gt;入力ソースから「ABC」を削除する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ポイントとして、英語キーボードを使う場合はABCを使うのではなく、「日本語 - ローマ字入力」のまま英字モードに切り替えて使うのが良いです。これで¥キーを押したときにバックスラッシュが出るようになります。&lt;/p&gt;
 &lt;h2 id="データの移行と設定の復元"&gt;データの移行と設定の復元
 &lt;/h2&gt;&lt;p&gt;手動でバックアップしたデータを新しいMacBook Airにコピーします。特に重要なフォルダや設定ファイルを元の場所に戻します。ミュージックアプリのライブラリも復元し、音楽データが正しく表示されることを確認します。&lt;/p&gt;
 &lt;h2 id="おわりに"&gt;おわりに
 &lt;/h2&gt;&lt;p&gt;ここまでの内容を見ると、「あれ、意外と大したことない？」と思うかもしれませんが、いかんせん高校3年分+大学3年分のデータ、環境があるので、結構な時間がかかりました。また、今使っていないものは入れないようにしたので、その分別も手間がかかりました。ちなみにまだ完全には終わっておらず、
-新しいMacBook Airでの作業環境が整い次第、また新たな記事を書いていきたいと思います。次回作をお楽しみに。&lt;/p&gt;</description></item><item><title>Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる</title><link>https://swimmy2611.com/post/tech/hugo-hp/</link><pubDate>Tue, 13 Jan 2026 00:00:00 +0900</pubDate><guid>https://swimmy2611.com/post/tech/hugo-hp/</guid><description>&lt;img src="https://swimmy2611.com/post/hugo-hp-cover.png" alt="Featured image of post Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる" /&gt;&lt;h2 id="はじめに"&gt;はじめに
+新しいMacBook Airでの作業環境が整い次第、また新たな記事を書いていきたいと思います。次回作をお楽しみに。&lt;/p&gt;
+&lt;h2 id="参考にしたサイト"&gt;参考にしたサイト
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.lifehacker.jp/article/160831_timemachine_command/" target="_blank" rel="noopener"
+&gt;Macに本気を出させてTime Machineバックアップを高速化するコマンド&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://qiita.com/makaishi2/items/da0682673f790918098c" target="_blank" rel="noopener"
+&gt;Mac Latex 導入メモ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://note.com/noa813/n/n88e23887b457" target="_blank" rel="noopener"
+&gt;【MacOS】PyenvとvenvでPython環境を構築する&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/adobe-fonts/source-han-code-jp/releases" target="_blank" rel="noopener"
+&gt;Source Han Code JP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://fonts.google.com/noto/specimen/Noto&amp;#43;Serif&amp;#43;JP" target="_blank" rel="noopener"
+&gt;Noto Fonts&lt;/a&gt; - ここからNoto Sans JPもダウンロード可能です。&lt;/li&gt;
+&lt;li&gt;Cover Image by &lt;a class="link" href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E3%82%B7%E3%83%AB%E3%83%90%E3%83%BC%E3%81%AEimac-ad%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89-z_dLXnQg0JY" target="_blank" rel="noopener"
+&gt;Unsplash&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる</title><link>https://swimmy2611.com/post/tech/hugo-hp/</link><pubDate>Tue, 13 Jan 2026 00:00:00 +0900</pubDate><guid>https://swimmy2611.com/post/tech/hugo-hp/</guid><description>&lt;img src="https://swimmy2611.com/post/hugo-hp-cover.png" alt="Featured image of post Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる" /&gt;&lt;h2 id="はじめに"&gt;はじめに
 &lt;/h2&gt;&lt;p&gt;先日、学科の友人におすすめされて、独自ドメインを取得して技術ブログを立ち上げよう、と急に思い立ちました。 そこで、Hugoを使ってブログを構築し、Github PagesとXserver Domainを組み合わせて独自ドメインで公開する方法を試してみました。&lt;/p&gt;
 &lt;h2 id="hugoとは"&gt;Hugoとは
 &lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
