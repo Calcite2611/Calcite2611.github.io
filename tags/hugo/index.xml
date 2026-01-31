@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on スイミーの技術メモ</title><link>https://swimmy2611.com/tags/hugo/</link><description>Recent content in Hugo on スイミーの技術メモ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>Swimmy2611</copyright><lastBuildDate>Tue, 13 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="https://swimmy2611.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる</title><link>https://swimmy2611.com/post/tech/hugo-hp/</link><pubDate>Tue, 13 Jan 2026 00:00:00 +0900</pubDate><guid>https://swimmy2611.com/post/tech/hugo-hp/</guid><description>&lt;img src="https://swimmy2611.com/images/hugo-hp/cover.png" alt="Featured image of post Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる" /&gt;&lt;h2 id="はじめに"&gt;はじめに
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on スイミーの技術メモ</title><link>https://swimmy2611.com/tags/hugo/</link><description>Recent content in Hugo on スイミーの技術メモ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>Swimmy2611</copyright><lastBuildDate>Tue, 13 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="https://swimmy2611.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる</title><link>https://swimmy2611.com/post/tech/hugo-hp/</link><pubDate>Tue, 13 Jan 2026 00:00:00 +0900</pubDate><guid>https://swimmy2611.com/post/tech/hugo-hp/</guid><description>&lt;img src="https://swimmy2611.com/" alt="Featured image of post Hugo + Github Pages + Xserver Domainで独自ドメインに技術ブログを立てる" /&gt;&lt;h2 id="はじめに"&gt;はじめに
 &lt;/h2&gt;&lt;p&gt;先日、学科の友人におすすめされて、独自ドメインを取得して技術ブログを立ち上げよう、と急に思い立ちました。 そこで、Hugoを使ってブログを構築し、Github PagesとXserver Domainを組み合わせて独自ドメインで公開する方法を試してみました。&lt;/p&gt;
 &lt;h2 id="hugoとは"&gt;Hugoとは
 &lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
-&gt;Hugo&lt;/a&gt;は、高速で柔軟な静的サイトジェネレーター（SSG）です。Markdownファイルから簡単にウェブサイトを生成でき、多くのテーマやプラグインが利用可能です。最大の特徴はその手軽さにあり、hugoコマンドでさまざまな操作が可能です。&lt;/p&gt;
+ &gt;Hugo&lt;/a&gt;は、高速で柔軟な静的サイトジェネレーター（SSG）です。Markdownファイルから簡単にウェブサイトを生成でき、多くのテーマやプラグインが利用可能です。最大の特徴はその手軽さにあり、hugoコマンドでさまざまな操作が可能です。&lt;/p&gt;
 &lt;h2 id="作業環境"&gt;作業環境
 &lt;/h2&gt;&lt;p&gt;ブログ執筆には普段から酷使しているM2Macを使用しました。具体的な環境は以下の通りです。&lt;/p&gt;
 &lt;ul&gt;
@@ -53,7 +53,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="テーマの追加"&gt;テーマの追加
 &lt;/h2&gt;&lt;p&gt;Hugoには数多くのテーマが用意されています。今回は&lt;a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/" target="_blank" rel="noopener"
-&gt;Stack&lt;/a&gt;というテーマを使用します。テーマを追加するには、以下のコマンドを実行します。&lt;/p&gt;
+ &gt;Stack&lt;/a&gt;というテーマを使用します。テーマを追加するには、以下のコマンドを実行します。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -274,7 +274,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;params&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;sidebar&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;emoji&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;subtitle&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;技術のことについてつらつらと書いていきます&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;params&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;sidebar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;avatar&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;enabled&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;local&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
@@ -346,60 +346,60 @@
 &lt;h3 id="ルートドメインを使う場合"&gt;ルートドメインを使う場合
 &lt;/h3&gt;&lt;p&gt;例えば、&lt;code&gt;example.com&lt;/code&gt;を使いたい場合は、以下のDNSレコードを追加します。&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;タイプ&lt;/th&gt;
-&lt;th&gt;名前&lt;/th&gt;
-&lt;th&gt;値&lt;/th&gt;
-&lt;th&gt;TTL&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;A&lt;/td&gt;
-&lt;td&gt;@&lt;/td&gt;
-&lt;td&gt;185.199.108.153&lt;/td&gt;
-&lt;td&gt;3600&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;A&lt;/td&gt;
-&lt;td&gt;@&lt;/td&gt;
-&lt;td&gt;185.199.109.153&lt;/td&gt;
-&lt;td&gt;3600&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;A&lt;/td&gt;
-&lt;td&gt;@&lt;/td&gt;
-&lt;td&gt;185.199.110.153&lt;/td&gt;
-&lt;td&gt;3600&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;A&lt;/td&gt;
-&lt;td&gt;@&lt;/td&gt;
-&lt;td&gt;185.199.111.153&lt;/td&gt;
-&lt;td&gt;3600&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;タイプ&lt;/th&gt;
+ &lt;th&gt;名前&lt;/th&gt;
+ &lt;th&gt;値&lt;/th&gt;
+ &lt;th&gt;TTL&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;A&lt;/td&gt;
+ &lt;td&gt;@&lt;/td&gt;
+ &lt;td&gt;185.199.108.153&lt;/td&gt;
+ &lt;td&gt;3600&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;A&lt;/td&gt;
+ &lt;td&gt;@&lt;/td&gt;
+ &lt;td&gt;185.199.109.153&lt;/td&gt;
+ &lt;td&gt;3600&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;A&lt;/td&gt;
+ &lt;td&gt;@&lt;/td&gt;
+ &lt;td&gt;185.199.110.153&lt;/td&gt;
+ &lt;td&gt;3600&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;A&lt;/td&gt;
+ &lt;td&gt;@&lt;/td&gt;
+ &lt;td&gt;185.199.111.153&lt;/td&gt;
+ &lt;td&gt;3600&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id="サブドメインを使う場合"&gt;サブドメインを使う場合
 &lt;/h3&gt;&lt;p&gt;例えば、&lt;code&gt;blog.example.com&lt;/code&gt;を使いたい場合は、以下のDNSレコードを追加します。&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;タイプ&lt;/th&gt;
-&lt;th&gt;名前&lt;/th&gt;
-&lt;th&gt;値&lt;/th&gt;
-&lt;th&gt;TTL&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;CNAME&lt;/td&gt;
-&lt;td&gt;blog&lt;/td&gt;
-&lt;td&gt;username.github.io.&lt;/td&gt;
-&lt;td&gt;3600&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;タイプ&lt;/th&gt;
+ &lt;th&gt;名前&lt;/th&gt;
+ &lt;th&gt;値&lt;/th&gt;
+ &lt;th&gt;TTL&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;CNAME&lt;/td&gt;
+ &lt;td&gt;blog&lt;/td&gt;
+ &lt;td&gt;username.github.io.&lt;/td&gt;
+ &lt;td&gt;3600&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;code&gt;username&lt;/code&gt;はGithubのユーザー名に置き換えてください。&lt;/p&gt;
 &lt;h2 id="ページ公開用のリポジトリの作成"&gt;ページ公開用のリポジトリの作成
@@ -540,11 +540,11 @@
 &lt;h2 id="出典"&gt;出典
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class="link" href="https://gohugo.io/documentation/" target="_blank" rel="noopener"
-&gt;Hugo公式ドキュメント&lt;/a&gt;&lt;/li&gt;
+ &gt;Hugo公式ドキュメント&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/" target="_blank" rel="noopener"
-&gt;Hugo Themes - Stack&lt;/a&gt;&lt;/li&gt;
+ &gt;Hugo Themes - Stack&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://docs.github.com/en/pages" target="_blank" rel="noopener"
-&gt;Github Pages公式ドキュメント&lt;/a&gt;&lt;/li&gt;
+ &gt;Github Pages公式ドキュメント&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cover Image by &lt;a class="link" href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/macbook-pro-white-ceramic-mugand-black-smartphone-on-table-cckf4TsHAuw" target="_blank" rel="noopener"
-&gt;Unsplash&lt;/a&gt;&lt;/li&gt;
+ &gt;Unsplash&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item></channel></rss>

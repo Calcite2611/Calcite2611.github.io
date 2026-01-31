@@ -6,15 +6,14 @@
 
 <link rel='canonical' href='http://localhost:1313/post/tech/obsidian-knowledgebase/'>
 
-<link rel="stylesheet" href="/scss/style.min.44b83ce8d393ba1aa56be3b54c2c1495743d92769653b6ab119b9746df10144d.css"><meta property='og:title' content="LMStudio + ObsidianでRAG環境を構築してハッキングの勉強を効率化する">
+<link rel="stylesheet" href="/scss/style.min.162c023f75dec2e067377770636f9444429726dc709ebb365fa9eb5cfdb12c9b.css"><meta property='og:title' content="LMStudio + ObsidianでRAG環境を構築してハッキングの勉強を効率化する">
 <meta property='og:description' content="Obsidian上にまとめたハッキングのナレッジベースをLMStudio経由で参照する環境を構築しました。">
 <meta property='og:url' content='http://localhost:1313/post/tech/obsidian-knowledgebase/'>
 <meta property='og:site_name' content='スイミーの技術メモ'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='LLM' /><meta property='article:tag' content='Markdown' /><meta property='article:tag' content='RAG' /><meta property='article:tag' content='Hacking' /><meta property='article:published_time' content='2026-01-31T01:01:33&#43;09:00'/><meta property='article:modified_time' content='2026-01-31T01:01:33&#43;09:00'/><meta property='og:image' content='http://localhost:1313/images/obsidian-knowledgebase/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='LLM' /><meta property='article:tag' content='Markdown' /><meta property='article:tag' content='RAG' /><meta property='article:tag' content='Hacking' /><meta property='article:published_time' content='2026-01-31T01:01:33&#43;09:00'/><meta property='article:modified_time' content='2026-01-31T01:01:33&#43;09:00'/><meta property='og:image' content='http://localhost:1313/' />
 <meta name="twitter:title" content="LMStudio + ObsidianでRAG環境を構築してハッキングの勉強を効率化する">
 <meta name="twitter:description" content="Obsidian上にまとめたハッキングのナレッジベースをLMStudio経由で参照する環境を構築しました。"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/images/obsidian-knowledgebase/cover.png' />
-    <link rel="shortcut icon" href="/favicon/favicon-96x96.png" />
+    <meta name="twitter:image" content='http://localhost:1313/' /><link rel="shortcut icon" href="/favicon/favicon-96x96.png" />
 
     </head>
     <body class="
@@ -50,23 +49,17 @@
     </button>
 
     <header>
-        
-            
-            <figure class="site-avatar">
+        <figure class="site-avatar">
                 <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/icon_hu_1b3a1aa8e9a023e6.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
+                    <img src="/img/icon.png" 
+                        width="1024"
+                        height="1024"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
                 </a>
                 
             </figure>
-            
         
         
         <div class="site-meta">
@@ -665,7 +658,8 @@
         <h2 class="widget-title section-title">目次</h2>
         
         <div class="widget--toc">
-            <nav id="TableOfContents">
+            <nav class="toc-nav" id="TableOfContents">
+                
   <ul>
     <li><a href="#倫理規定">倫理規定</a></li>
     <li><a href="#はじめに">はじめに</a></li>
@@ -679,7 +673,8 @@
     <li><a href="#おわりに">おわりに</a></li>
     <li><a href="#出典">出典</a></li>
   </ul>
-</nav>
+
+            </nav>
         </div>
     </section>
 
@@ -691,20 +686,22 @@
             <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/post/tech/obsidian-knowledgebase/">
-                
-                    <img src="/images/obsidian-knowledgebase/cover.png" loading="lazy" alt="Featured image of post LMStudio &#43; ObsidianでRAG環境を構築してハッキングの勉強を効率化する" />
-                
-            </a>
-        </div>
+    <div class="article-image">
+        <a href="/post/tech/obsidian-knowledgebase/">
+            <img src="/post/tech/obsidian-knowledgebase/cover.png" width="3648" height="2048" loading="lazy"
+                alt="Featured image of post LMStudio &#43; ObsidianでRAG環境を構築してハッキングの勉強を効率化する" />
+        </a>
+    </div>
     
 
     <div class="article-details">
     
     <header class="article-category">
         
-            <a href="/categories/tech/" >
+            
+            
+            
+            <a href="/categories/tech/" style="background-color: hsl(145, 60%, 84%); color: hsl(145, 60%, 15%);">
                 Tech
             </a>
         
@@ -765,6 +762,36 @@
 </div>
 
 </header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目次</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#倫理規定">倫理規定</a></li>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#環境">環境</a></li>
+    <li><a href="#システム構成">システム構成</a></li>
+    <li><a href="#モデルについて">モデルについて</a></li>
+    <li><a href="#obsidianの設定">Obsidianの設定</a></li>
+    <li><a href="#lmstudioの設定">LMStudioの設定</a></li>
+    <li><a href="#obsidianとlmstudioの連携">ObsidianとLMStudioの連携</a></li>
+    <li><a href="#使い方">使い方</a></li>
+    <li><a href="#おわりに">おわりに</a></li>
+    <li><a href="#出典">出典</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
 
     <section class="article-content">
     
@@ -842,14 +869,17 @@
 <h2 id="obsidianとlmstudioの連携">ObsidianとLMStudioの連携
 </h2><p>まず、LMStudio側でAIモデルをAPI化します。以下のように、Loaded Modelsタブから対象のモデルを選択し、Statusを「Running」に変更します。これで、LMStudioがモデルをAPIとして提供するようになります。また、Server Settingsから、Enable CORSを有効にしておきます。これをしておかないと、ObsidianからLMStudioのAPIにアクセスできません。その後、API Keyを設定します。Server Settingsタブから、Require Authenticationを有効にし、API Keyを設定します。API Keyを作成すると、自動生成の長い文字列が表示されるので、これを控えておきます。
 成功するとこのようになります。</p>
-<p><img src="/images/obsidian-knowledgebase/lmstudio.png"
-	
-	
-	
+<p><img src="/post/tech/obsidian-knowledgebase/lmstudio.png"
+	width="3644"
+	height="2370"
 	loading="lazy"
 	
 		alt="LMStudioでモデルをAPI化している様子"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="153"
+		data-flex-basis="369px"
 	
 ></p>
 <p>続いて、Obsidian側でプラグインを導入します。今回はCopilotというプラグインを使用しました。Obsidianの設定画面から、Community Pluginsタブを開き、Browseボタンをクリックします。検索バーに「Copilot」と入力し、表示されたプラグインをインストールします。
@@ -867,14 +897,17 @@
 <h2 id="使い方">使い方
 </h2><p>Obsidian上の画面左端にあるOpen Copilot Chatボタンをクリックすると、Chat UIが表示されます。ここに質問を入力すると、LMStudio上のモデルが応答を生成し、Obsidian上に表示されます。例えば、「sshをブルートフォースするのに使用可能なツールを教えて」と入力すると、ナレッジベースに記事があればそれを参考にして、SQLインジェクションについての説明が返ってきます。以下が実例です。結構良い感じに答えてくれます。</p>
 <p>⚠️: 以下の内容はあくまで実例であり、実際のサーバーやシステムに対して攻撃を行うことを推奨するものではありません。倫理的かつ合法的な範囲での利用を心がけてください。</p>
-<p><img src="/images/obsidian-knowledgebase/usage-example.png"
-	
-	
-	
+<p><img src="/post/tech/obsidian-knowledgebase/usage-example.png"
+	width="3644"
+	height="2370"
 	loading="lazy"
 	
 		alt="実際のプロンプトを実行している様子"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="153"
+		data-flex-basis="369px"
 	
 ></p>
 <h2 id="おわりに">おわりに
@@ -966,6 +999,29 @@
      
     
         
+    <div class="disqus-container">
+    
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
     
 
     <footer class="site-footer">
@@ -979,97 +1035,45 @@
         
             Made with Hugo & Stack <br/>
         <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
-        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.33.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
     </section>
 </footer>
 
 
     
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
     
-    <div class="pswp__bg"></div>
+    if (shouldLoad) {
+        gallery(articleContent);
 
-    
-    <div class="pswp__scroll-wrap">
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
 
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
 
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
-            >
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
     
 
             </main>
         </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
-                
-                >
-            </script><script type="text/javascript" src="/ts/main.35510592ef87a0feeed77217010c7af1a43a6513ebdcf8ae0381736a41c34611.js" defer></script>
+        <script type="text/javascript" src="/ts/main.d9ed8989e6538571a1f6e2890794ce362ed8da8c0c8ec6a8214cf7c03f02b2c9.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

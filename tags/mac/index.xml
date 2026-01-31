@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mac on スイミーの技術メモ</title><link>https://swimmy2611.com/tags/mac/</link><description>Recent content in Mac on スイミーの技術メモ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>Swimmy2611</copyright><lastBuildDate>Fri, 30 Jan 2026 20:03:34 +0900</lastBuildDate><atom:link href="https://swimmy2611.com/tags/mac/index.xml" rel="self" type="application/rss+xml"/><item><title>新しいMacBook Airに環境を移行した話</title><link>https://swimmy2611.com/post/tech/new-pc/</link><pubDate>Fri, 30 Jan 2026 20:03:34 +0900</pubDate><guid>https://swimmy2611.com/post/tech/new-pc/</guid><description>&lt;img src="https://swimmy2611.com/images/new-macbookair/cover.png" alt="Featured image of post 新しいMacBook Airに環境を移行した話" /&gt;&lt;h2 id="はじめに"&gt;はじめに
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mac on スイミーの技術メモ</title><link>https://swimmy2611.com/tags/mac/</link><description>Recent content in Mac on スイミーの技術メモ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>Swimmy2611</copyright><lastBuildDate>Fri, 30 Jan 2026 20:03:34 +0900</lastBuildDate><atom:link href="https://swimmy2611.com/tags/mac/index.xml" rel="self" type="application/rss+xml"/><item><title>新しいMacBook Airに環境を移行した話</title><link>https://swimmy2611.com/post/tech/new-pc/</link><pubDate>Fri, 30 Jan 2026 20:03:34 +0900</pubDate><guid>https://swimmy2611.com/post/tech/new-pc/</guid><description>&lt;img src="https://swimmy2611.com/" alt="Featured image of post 新しいMacBook Airに環境を移行した話" /&gt;&lt;h2 id="はじめに"&gt;はじめに
 &lt;/h2&gt;&lt;p&gt;先日、新しいMacBook Air (Apple M4, 2025)を購入しました。これに伴い、以前のMacBook Air (Apple M2, 2022)から環境を移行する必要がありました。この記事では、その際に行った環境設定やインストールしたソフトウェアについて備忘録としてまとめます。&lt;/p&gt;
 &lt;h2 id="環境移行の概要"&gt;環境移行の概要
 &lt;/h2&gt;&lt;p&gt;今回の環境移行は、以下の手順で行いました。&lt;/p&gt;
@@ -52,7 +52,7 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install pyenv rust wget ImageMagick
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install mactex --cask
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install mactex --cask 
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo /usr/local/texlive/2025/bin/universal-darwin/tlmgr update --self --all
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -96,15 +96,15 @@
 &lt;h2 id="参考にしたサイト"&gt;参考にしたサイト
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class="link" href="https://www.lifehacker.jp/article/160831_timemachine_command/" target="_blank" rel="noopener"
-&gt;Macに本気を出させてTime Machineバックアップを高速化するコマンド&lt;/a&gt;&lt;/li&gt;
+ &gt;Macに本気を出させてTime Machineバックアップを高速化するコマンド&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://qiita.com/makaishi2/items/da0682673f790918098c" target="_blank" rel="noopener"
-&gt;Mac Latex 導入メモ&lt;/a&gt;&lt;/li&gt;
+ &gt;Mac Latex 導入メモ&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://note.com/noa813/n/n88e23887b457" target="_blank" rel="noopener"
-&gt;【MacOS】PyenvとvenvでPython環境を構築する&lt;/a&gt;&lt;/li&gt;
+ &gt;【MacOS】PyenvとvenvでPython環境を構築する&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://github.com/adobe-fonts/source-han-code-jp/releases" target="_blank" rel="noopener"
-&gt;Source Han Code JP&lt;/a&gt;&lt;/li&gt;
+ &gt;Source Han Code JP&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://fonts.google.com/noto/specimen/Noto&amp;#43;Serif&amp;#43;JP" target="_blank" rel="noopener"
-&gt;Noto Fonts&lt;/a&gt; - ここからNoto Sans JPもダウンロード可能です。&lt;/li&gt;
+ &gt;Noto Fonts&lt;/a&gt; - ここからNoto Sans JPもダウンロード可能です。&lt;/li&gt;
 &lt;li&gt;Cover Image by &lt;a class="link" href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E3%82%B7%E3%83%AB%E3%83%90%E3%83%BC%E3%81%AEimac-ad%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89-z_dLXnQg0JY" target="_blank" rel="noopener"
-&gt;Unsplash&lt;/a&gt;&lt;/li&gt;
+ &gt;Unsplash&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item></channel></rss>
