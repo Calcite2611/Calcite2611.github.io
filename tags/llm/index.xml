@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>LLM on スイミーの技術メモ</title>
+        <link>http://localhost:1313/tags/llm/</link>
+        <description>Recent content in LLM on スイミーの技術メモ</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>Swimmy2611</copyright>
+        <lastBuildDate>Sat, 31 Jan 2026 01:01:33 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/llm/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>LMStudio &#43; ObsidianでRAG環境を構築してハッキングの勉強を効率化する</title>
+        <link>http://localhost:1313/post/tech/obsidian-knowledgebase/</link>
+        <pubDate>Sat, 31 Jan 2026 01:01:33 +0900</pubDate>
+        
+        <guid>http://localhost:1313/post/tech/obsidian-knowledgebase/</guid>
+        <description>&lt;img src="http://localhost:1313/images/obsidian-knowledgebase/cover.png" alt="Featured image of post LMStudio &#43; ObsidianでRAG環境を構築してハッキングの勉強を効率化する" /&gt;&lt;h2 id=&#34;倫理規定&#34;&gt;倫理規定
+&lt;/h2&gt;&lt;p&gt;この記事では、ハッキングに関するナレッジベースを構築し、LMStudioとObsidianを組み合わせて効率的に参照する方法について説明します。ハッキングに関する情報は&lt;strong&gt;倫理的に問題のある内容を含む&lt;/strong&gt;可能性があるため、この記事では&lt;strong&gt;以下の倫理規定を遵守&lt;/strong&gt;します。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;合法性の遵守&lt;/strong&gt;: 本記事で紹介する方法やツールは、合法的な目的でのみ使用されることを前提としています。不正アクセスや違法行為を助長する意図は一切ありません。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;教育目的&lt;/strong&gt;: 本記事の内容は、セキュリティ研究や教育、学習目的での利用を想定しています。実際の攻撃行為を推奨するものではありません。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;責任の所在&lt;/strong&gt;: 本記事の内容を利用して発生したいかなる問題についても、著者および配信者は一切の責任を負いません。利用者自身が法的および倫理的責任を負うものとします。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;はじめに&#34;&gt;はじめに
+&lt;/h2&gt;&lt;p&gt;最近はできていないものの、実は現在ハッキングの勉強をしています。ハッキングの勉強、特にペネトレーションテストの勉強をする際には、様々なツールや情報を参照する必要があるのですが、とにかく情報が多すぎて処理するのが大変です。とても暗記はできないので、必要なときに必要な情報を素早く参照できる環境が欲しいと考えていました。
+元々、手動で情報をまとめるためにVSCode上で動作する&lt;a class=&#34;link&#34; href=&#34;https://github.com/foambubble/foam&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Foam&lt;/a&gt;を使っていたのですが、ある記事で、FoamとObsidianは共存できることを知ったため、入力はGithub Copilotの支援を受けることのできるFaomで行い、ナレッジベースの参照はObsidianで行うことにしました。さらに、Obsidian上にまとめたナレッジベースをLMStudio経由で参照できるようにすることで、必要な情報を素早く引き出せるようにしました。
+この記事では、その環境構築の手順について紹介します。&lt;/p&gt;
+&lt;h2 id=&#34;環境&#34;&gt;環境
+&lt;/h2&gt;&lt;p&gt;今回構築する環境は以下の通りです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PC: MacBook Air (Apple M4, 2025)&lt;/li&gt;
+&lt;li&gt;CPU: Apple M4&lt;/li&gt;
+&lt;li&gt;RAM: 32GB&lt;/li&gt;
+&lt;li&gt;OS: macOS Tahoe 26.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;システム構成&#34;&gt;システム構成
+&lt;/h2&gt;&lt;p&gt;今回構築するシステムの構成は以下の通りです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LMStudio: ローカルで動作する大規模言語モデルの管理・実行環境&lt;/li&gt;
+&lt;li&gt;Obsidian: ナレッジベースの管理・参照ツール&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Obsidianの拡張機能のおかげでMCPサーバーを簡単に利用できるため、Obsidian上でLMStudioのモデルを利用してナレッジベースを参照できるようになります。&lt;/p&gt;
+&lt;h2 id=&#34;モデルについて&#34;&gt;モデルについて
+&lt;/h2&gt;&lt;p&gt;今回は、LMStudio上で動作するdeepseek-r1-distill-qwen-14b-abliterated-v2-mlxというモデルを使用します。このモデルは、Qwen-14Bをベースにしており、abliteratedという名前からもわかる通り、いわゆる無検閲モデル化されています。そのため、一般的なモデルでは良くある、倫理的に問題のある質問に対して回答を拒否するような挙動が抑制されています。ハッキングの勉強においては、相手のサーバーの脆弱性を突くために倫理的に問題のある質問をすることもあるため、このような無検閲モデルが適しています。&lt;/p&gt;
+&lt;h2 id=&#34;obsidianの設定&#34;&gt;Obsidianの設定
+&lt;/h2&gt;&lt;p&gt;まず初めに、ナレッジベースを用意します。ここについては割愛しますが、FoamやObsidianを使ってハッキングに関する情報をまとめていきます。今回使用したナレッジベースは、以下のような構成になっています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;KnowledgeBase/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Notes/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── Level1-tags
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   │   ├── Level2-tags
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   │   │   ├── Note1.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   │   │   ├── Note2.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   │   │   └── ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   │   └── ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   └── ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── Templates/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    └── ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;そのため、Obsidian上でワークスペースを開くときは、KnowledgeBaseフォルダを指定しました。
+こうすることによって、KnowledgeBaseフォルダ直下に、Untitled.baseというObsidianの設定ファイルが生成されます。
+この設定ファイルについては、Obsidianの設定を保存するためのものであり、ワークスペースの設定やプラグインの情報などが含まれています。今回は直接編集等は行いません。&lt;/p&gt;
+&lt;h2 id=&#34;lmstudioの設定&#34;&gt;LMStudioの設定
+&lt;/h2&gt;&lt;p&gt;続いて、LMStudioの設定を行います。LMStudioは、ローカルで動作する大規模言語モデルの管理・実行環境です。LMStudioをインストールし、起動します。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://lmstudio.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LMStudio公式サイト&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;このリンクからLMStudioをダウンロードし、インストールします。インストールが完了したら、LMStudioを起動します。&lt;/p&gt;
+&lt;p&gt;LMStudioを起動したら、deepseek-r1-distill-qwen-14b-abliterated-v2-mlxモデルをインストールします。LMStudioのモデル管理画面から簡単にインストールできます。&lt;/p&gt;
+&lt;h2 id=&#34;obsidianとlmstudioの連携&#34;&gt;ObsidianとLMStudioの連携
+&lt;/h2&gt;&lt;p&gt;まず、LMStudio側でAIモデルをAPI化します。以下のように、Loaded Modelsタブから対象のモデルを選択し、Statusを「Running」に変更します。これで、LMStudioがモデルをAPIとして提供するようになります。また、Server Settingsから、Enable CORSを有効にしておきます。これをしておかないと、ObsidianからLMStudioのAPIにアクセスできません。その後、API Keyを設定します。Server Settingsタブから、Require Authenticationを有効にし、API Keyを設定します。API Keyを作成すると、自動生成の長い文字列が表示されるので、これを控えておきます。
+成功するとこのようになります。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/obsidian-knowledgebase/lmstudio.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LMStudioでモデルをAPI化している様子&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;続いて、Obsidian側でプラグインを導入します。今回はCopilotというプラグインを使用しました。Obsidianの設定画面から、Community Pluginsタブを開き、Browseボタンをクリックします。検索バーに「Copilot」と入力し、表示されたプラグインをインストールします。
+インストールが完了したら、Copilotプラグインの設定画面を開き、Modelのタブから、先ほどLMStudioでAPI化したモデルの情報を入力します。具体的には、以下のように設定します。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Model Name: deepseek-r1-distill-qwen-14b-abliterated-v2-mlx&lt;/li&gt;
+&lt;li&gt;Display Name: LMStudio (任意)&lt;/li&gt;
+&lt;li&gt;Provider: LMStudio&lt;/li&gt;
+&lt;li&gt;Base URL: http://127.0.0.1:1234/v1(LMStudioにはReachable at: http://127.0.0.1:1234と出ますが、/v1を付け加える必要があるかも。私の環境では必要でした)&lt;/li&gt;
+&lt;li&gt;API Key: 先ほど控えたAPI Key&lt;/li&gt;
+&lt;li&gt;Model Capabilities: Reasoning(チェックを入れる、実際の動作には影響しませんが、Obsidian側での表示が変わります)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これで、Obsidian上でLMStudioのモデルを利用できるようになります。
+また、Basicのタブで、Open Plugin InをEditorに設定しておくと、良くあるChat UIでプロンプトを入力できるようになります(Sidebarにしておくと、サイドバーにChat UIが表示されます)。&lt;/p&gt;
+&lt;h2 id=&#34;使い方&#34;&gt;使い方
+&lt;/h2&gt;&lt;p&gt;Obsidian上の画面左端にあるOpen Copilot Chatボタンをクリックすると、Chat UIが表示されます。ここに質問を入力すると、LMStudio上のモデルが応答を生成し、Obsidian上に表示されます。例えば、「sshをブルートフォースするのに使用可能なツールを教えて」と入力すると、ナレッジベースに記事があればそれを参考にして、SQLインジェクションについての説明が返ってきます。以下が実例です。結構良い感じに答えてくれます。&lt;/p&gt;
+&lt;p&gt;⚠️: 以下の内容はあくまで実例であり、実際のサーバーやシステムに対して攻撃を行うことを推奨するものではありません。倫理的かつ合法的な範囲での利用を心がけてください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/obsidian-knowledgebase/usage-example.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;実際のプロンプトを実行している様子&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに
+&lt;/h2&gt;&lt;p&gt;今回は、LMStudio + ObsidianでRAG環境を構築してナレッジベース利用を効率化する方法について紹介しました。この環境を活用することで、必要な情報を素早く参照でき、学習効率が向上することが期待されます。今後もナレッジベースを充実させつつ、LMStudioのモデルも適宜更新していく予定です。&lt;/p&gt;
+&lt;h2 id=&#34;出典&#34;&gt;出典
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://lmstudio.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LMStudio公式サイト&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://obsidian.md/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Obsidian公式サイト&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://okojomemorandum.com/blog/zettelkasten-vscode-obsidian/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ObsidianとVS Code両方でZettelkastenする&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cover Image by &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E9%BB%92%E3%81%84%E3%82%B8%E3%83%A3%E3%82%B1%E3%83%83%E3%83%88%E3%82%92%E7%9D%80%E3%81%9F%E4%BA%BA%E7%89%A9%E3%81%AE%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E5%86%99%E7%9C%9F-pawPQMgJj08&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unsplash&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
