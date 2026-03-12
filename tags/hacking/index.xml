@@ -784,7 +784,19 @@
 &lt;h2 id="obsidianとlmstudioの連携"&gt;ObsidianとLMStudioの連携
 &lt;/h2&gt;&lt;p&gt;まず、LMStudio側でAIモデルをAPI化します。以下のように、Loaded Modelsタブから対象のモデルを選択し、Statusを「Running」に変更します。これで、LMStudioがモデルをAPIとして提供するようになります。また、Server Settingsから、Enable CORSを有効にしておきます。これをしておかないと、ObsidianからLMStudioのAPIにアクセスできません。その後、API Keyを設定します。Server Settingsタブから、Require Authenticationを有効にし、API Keyを設定します。API Keyを作成すると、自動生成の長い文字列が表示されるので、これを控えておきます。
 成功するとこのようになります。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="LMStudioでモデルをAPI化している様子" class="gallery-image" data-flex-basis="369px" data-flex-grow="153" height="2370" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://swimmy2611.com/post/tech/obsidian-knowledgebase/lmstudio.png" srcset="https://swimmy2611.com/post/tech/obsidian-knowledgebase/lmstudio_hu_a44de4b6c94628cf.png 800w, https://swimmy2611.com/post/tech/obsidian-knowledgebase/lmstudio_hu_43f8ee5661f9df13.png 1600w, https://swimmy2611.com/post/tech/obsidian-knowledgebase/lmstudio_hu_58b54cb55e1e7d84.png 2400w, https://swimmy2611.com/post/tech/obsidian-knowledgebase/lmstudio.png 3644w" width="3644"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://swimmy2611.com/post/tech/obsidian-knowledgebase/lmstudio.png"
+	width="3644"
+	height="2370"
+	loading="lazy"
+	
+		alt="LMStudioでモデルをAPI化している様子"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="153"
+		data-flex-basis="369px"
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;続いて、Obsidian側でプラグインを導入します。今回はCopilotというプラグインを使用しました。Obsidianの設定画面から、Community Pluginsタブを開き、Browseボタンをクリックします。検索バーに「Copilot」と入力し、表示されたプラグインをインストールします。
 インストールが完了したら、Copilotプラグインの設定画面を開き、Modelのタブから、先ほどLMStudioでAPI化したモデルの情報を入力します。具体的には、以下のように設定します。&lt;/p&gt;
 &lt;ul&gt;
@@ -800,7 +812,19 @@
 &lt;h2 id="使い方"&gt;使い方
 &lt;/h2&gt;&lt;p&gt;Obsidian上の画面左端にあるOpen Copilot Chatボタンをクリックすると、Chat UIが表示されます。ここに質問を入力すると、LMStudio上のモデルが応答を生成し、Obsidian上に表示されます。例えば、「sshをブルートフォースするのに使用可能なツールを教えて」と入力すると、ナレッジベースに記事があればそれを参考にして、SQLインジェクションについての説明が返ってきます。以下が実例です。結構良い感じに答えてくれます。&lt;/p&gt;
 &lt;p&gt;⚠️: 以下の内容はあくまで実例であり、実際のサーバーやシステムに対して攻撃を行うことを推奨するものではありません。倫理的かつ合法的な範囲での利用を心がけてください。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="実際のプロンプトを実行している様子" class="gallery-image" data-flex-basis="369px" data-flex-grow="153" height="2370" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://swimmy2611.com/post/tech/obsidian-knowledgebase/usage-example.png" srcset="https://swimmy2611.com/post/tech/obsidian-knowledgebase/usage-example_hu_3296d18a1cf734e3.png 800w, https://swimmy2611.com/post/tech/obsidian-knowledgebase/usage-example_hu_7362ef5f07af7a7d.png 1600w, https://swimmy2611.com/post/tech/obsidian-knowledgebase/usage-example_hu_e618a09bb0d9d93a.png 2400w, https://swimmy2611.com/post/tech/obsidian-knowledgebase/usage-example.png 3644w" width="3644"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://swimmy2611.com/post/tech/obsidian-knowledgebase/usage-example.png"
+	width="3644"
+	height="2370"
+	loading="lazy"
+	
+		alt="実際のプロンプトを実行している様子"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="153"
+		data-flex-basis="369px"
+	
+&gt;&lt;/p&gt;
 &lt;h2 id="おわりに"&gt;おわりに
 &lt;/h2&gt;&lt;p&gt;今回は、LMStudio + ObsidianでRAG環境を構築してナレッジベース利用を効率化する方法について紹介しました。この環境を活用することで、必要な情報を素早く参照でき、学習効率が向上することが期待されます。今後もナレッジベースを充実させつつ、LMStudioのモデルも適宜更新していく予定です。&lt;/p&gt;
 &lt;h2 id="出典"&gt;出典
