@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=59236&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="作って理解する仮想化技術という本の内容を実際に手を動かして理解するためのシリーズ記事です。">
 <title>作って理解する仮想化技術 - 1</title>
 
-<link rel='canonical' href='http://localhost:1313/post/series/hypervisor/day1/'>
 
-<link rel="stylesheet" href="/scss/style.min.162c023f75dec2e067377770636f9444429726dc709ebb365fa9eb5cfdb12c9b.css"><meta property='og:title' content="作って理解する仮想化技術 - 1">
+<link rel="canonical" href="http://localhost:59236/post/series/hypervisor/day1/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.6c76d42bfe9279d79be84b97ff0477dca6754ca0a8c86d27fe967e5d0a9c3f9a.css"><meta property='og:title' content="作って理解する仮想化技術 - 1">
 <meta property='og:description' content="作って理解する仮想化技術という本の内容を実際に手を動かして理解するためのシリーズ記事です。">
-<meta property='og:url' content='http://localhost:1313/post/series/hypervisor/day1/'>
+<meta property='og:url' content='http://localhost:59236/post/series/hypervisor/day1/'>
 <meta property='og:site_name' content='スイミーの技術メモ'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hypervisor' /><meta property='article:published_time' content='2026-02-16T04:53:02&#43;09:00'/><meta property='article:modified_time' content='2026-02-16T04:53:02&#43;09:00'/>
 <meta name="twitter:title" content="作って理解する仮想化技術 - 1">
-<meta name="twitter:description" content="作って理解する仮想化技術という本の内容を実際に手を動かして理解するためのシリーズ記事です。"><link rel="shortcut icon" href="/favicon/favicon-96x96.png" />
+<meta name="twitter:description" content="作って理解する仮想化技術という本の内容を実際に手を動かして理解するためのシリーズ記事です。">
+    <link rel="shortcut icon" href="/favicon/favicon-96x96.png" />
 
     </head>
     <body class="
@@ -711,10 +718,14 @@
     
     
     
-    <footer class="article-time">
+    
+    
+    
+    <footer class="article-meta">
         
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
   <circle cx="18" cy="18" r="4" />
@@ -723,13 +734,11 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published" datetime='2026-02-16T04:53:02&#43;09:00'>2026/02/16</time>
-            </div>
-        
+                    <time class="article-time--published" datetime='2026-02-16T04:53:02&#43;09:00'>2026/02/16</time>
+                
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
@@ -737,14 +746,17 @@
 
 
 
-                <time class="article-time--reading">
-                    読了時間: 2分
-                </time>
+                    <time class="article-time--reading">
+                        読了時間: 2分
+                    </time>
+                
             </div>
         
-    </footer>
-    
 
+        
+
+        
+    </footer>
     
 </div>
 
@@ -951,7 +963,7 @@ dockerを使う方法もあり、おそらくそちらの方がリソースの�
 </section>
 
 
-    <footer class="article-footer">
+    <footer class="article-meta article-footer">
     
     <section class="article-tags">
         
@@ -961,7 +973,7 @@ dockerを使う方法もあり、おそらくそちらの方がリソースの�
 
 
     
-    <section class="article-copyright">
+    <section class="article-copyright inline-meta">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
@@ -1017,7 +1029,7 @@ dockerを使う方法もあり、おそらくそちらの方がリソースの�
      
     
         
-    <div class="disqus-container">
+        <div class="disqus-container">
     
 </div>
 
@@ -1039,7 +1051,6 @@ dockerを使う方法もあり、おそらくそちらの方がリソースの�
         }
     })
 </script>
-
     
 
     <footer class="site-footer">
@@ -1091,18 +1102,9 @@ dockerを使う方法もあり、おそらくそちらの方がリソースの�
 
             </main>
         </div>
-        <script type="text/javascript" src="/ts/main.d9ed8989e6538571a1f6e2890794ce362ed8da8c0c8ec6a8214cf7c03f02b2c9.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+        
+<script type="text/javascript" src="/ts/main.d9ed8989e6538571a1f6e2890794ce362ed8da8c0c8ec6a8214cf7c03f02b2c9.js" defer></script>
 
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
 
     </body>
 </html>
