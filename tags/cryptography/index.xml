@@ -2,9 +2,11 @@
 &lt;/h2&gt;&lt;p&gt;今回から、暗号プロトコルを理解するシリーズを始めます。暗号プロトコルは、セキュリティの基礎となる重要な技術ですが、その仕組みや原理を理解するのは難しいこともあります。第一回では、暗号技術の中でも最近話題の非対称性暗号の一種である楕円曲線暗号（ECC）について学んでいきます。&lt;/p&gt;
 &lt;h2 id="楕円曲線暗号eccとは"&gt;楕円曲線暗号（ECC）とは？
 &lt;/h2&gt;&lt;p&gt;まず、Wikipediaの説明を見てみましょう。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;楕円曲線暗号(Elliptic Curve Cryptography, ECC)は、楕円曲線上の離散対数問題の困難性を安全性の根拠とする暗号。&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;楕円曲線暗号(Elliptic Curve Cryptography, ECC)は、楕円曲線上の離散対数問題の困難性を安全性の根拠とする暗号。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;はて？楕円曲線上の離散対数問題とは？&lt;/p&gt;
 &lt;p&gt;どうやら、以下のようなことを言っているようです。&lt;/p&gt;
 &lt;ul&gt;
